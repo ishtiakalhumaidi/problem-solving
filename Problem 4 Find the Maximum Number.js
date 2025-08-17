@@ -1,11 +1,11 @@
-function removeDuplicates(arr) {
-  let newArr = [];
-  for (let i = 0; i <= arr.length - 1; i++) {
-    if (!newArr.includes(arr[i])) {
-      newArr.push(arr[i])
+function maximumNumber(arr) {
+  let maxNum = arr[0];
+  for (const i of arr) {
+    if (maxNum < i) {
+      maxNum = i;
     }
   }
-  return newArr;
+  return maxNum;
 }
-const a = removeDuplicates([1, 2, 2, 3, 4, 4]);
+const a = maximumNumber([5, 1, 9, 3]);
 console.log(a);
